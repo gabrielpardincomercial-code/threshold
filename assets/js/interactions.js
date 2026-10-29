@@ -20,7 +20,8 @@ function initWeekStrip() {
     slats.forEach((s, i) => {
       if (i === index) {
         s.setAttribute('data-open', 'true');
-        s.setAttribute('data-in', 'true');
+        // cartão de descanso usa texto escuro: data-in=true deixaria texto branco sobre fundo branco
+        s.setAttribute('data-in', s.getAttribute('data-rest') === 'true' ? 'false' : 'true');
       } else {
         s.setAttribute('data-open', 'false');
         if (s.getAttribute('data-rest') !== 'true') {
@@ -89,7 +90,7 @@ function initWeekStripMobile() {
     current = i;
     slats.forEach((s, k) => {
       s.setAttribute('data-open', k === i ? 'true' : 'false');
-      s.setAttribute('data-in', 'true');
+      s.setAttribute('data-in', s.getAttribute('data-rest') === 'true' ? 'false' : 'true');
       s.style.opacity = '1';
     });
     tabs.forEach((t, k) => {

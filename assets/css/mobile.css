@@ -48,3 +48,9 @@
 @media (max-width: 809.98px) {
   .framer-9z9s0d-container span[style*="--tzc-cell"] { font-size: 33vw !important; }
 }
+
+/* Desktop: os botões do hero em português são mais largos que o original; deixa quebrar em vez de vazar */
+.framer-1hmnqk3{flex-wrap:wrap !important;max-width:100% !important;height:auto !important}
+
+/* Linha de meta dos artigos (categoria · data · leitura) quebra em telas estreitas */
+@media (max-width:809.98px){ .framer-1b901id{flex-wrap:wrap !important;row-gap:4px !important;max-width:100% !important} }
