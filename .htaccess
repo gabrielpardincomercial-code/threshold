@@ -1,4 +1,4 @@
-# Threshold - Hostinger LiteSpeed configuration (.htaccess)
+# Felipe França - Hostinger LiteSpeed configuration (.htaccess)
 DirectoryIndex index.html
 Options -Indexes
 RewriteEngine On
@@ -20,9 +20,9 @@ RewriteRule ^(.*)index\.html$ /$1 [R=301,L,NC]
 RewriteCond %{THE_REQUEST} \s/(.+)\.html[\s?] [NC]
 RewriteRule ^(.+)\.html$ /$1 [R=301,L,NC]
 
-# ---- Clean URLs: /about -> about.html ----
+# ---- Clean URLs: /planos -> planos.html (also when a folder with the same name exists, e.g. /blog) ----
+RewriteCond %{REQUEST_URI} !/$
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L,QSA]
 

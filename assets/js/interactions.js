@@ -1,5 +1,5 @@
 /**
- * Threshold Site Interactions
+ * Felipe França - interações do site
  * Clean, lightweight vanilla JS replacing proprietary Framer hydration runtime
  */
 
@@ -120,11 +120,11 @@ function initForms() {
       const submitBtn = form.querySelector('[type="submit"]') || form.querySelector('button');
       const origText = submitBtn ? submitBtn.innerText : '';
       if (submitBtn) {
-        submitBtn.innerText = 'Reserved!';
+        submitBtn.innerText = 'Reservado!';
         submitBtn.style.backgroundColor = '#22c55e';
       }
       setTimeout(() => {
-        alert('Thank you! Your spot is reserved. We will send details to your email.');
+        alert('Obrigado! Sua vaga está reservada. Enviaremos os detalhes por e-mail.');
         if (submitBtn) {
           submitBtn.innerText = origText;
           submitBtn.style.backgroundColor = '';

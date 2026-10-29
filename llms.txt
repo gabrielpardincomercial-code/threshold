@@ -1,18 +1,18 @@
-# Thres — Heart-rate training club
+# Felipe França — Treino por frequência cardíaca
 
-> Thres is a heart-rate training club. Every day has a zone and a class built for it: open the week, find your zone and book a free first class.
+> Estúdio de treino por frequência cardíaca com o coach Felipe França. Cada dia tem uma zona e uma aula pensada para ela: abra a semana, encontre sua zona e agende uma aula experimental grátis.
 
-## Overview
-- Website: https://threshold.landingprofile.com
-- Location: Unit 4, Tannery Wharf, Bristol BS1 6QH
-- Contact: hello@thres.club
-- Hours: Monday to Friday 06:00 - 21:00, Saturday 08:00 - 14:00
+## Visão geral
+- Site: https://threshold.landingprofile.com
+- Endereço: Rua Wisard, 250, Vila Madalena, São Paulo - SP, 05434-080
+- Contato: contato@felipefranca.com.br
+- Horários: segunda a sexta, 06h às 21h; sábado, 08h às 14h
 
-## Key Routes
-- Timetable: /timetable
-- Classes: /classes
-- Coaches: /coaches
-- Membership: /membership
-- Studio: /studio
-- Journal: /journal
-- Visit & Booking: /visit
+## Páginas principais
+- Horários: /horarios
+- Aulas: /aulas
+- Treinadores: /treinadores
+- Planos: /planos
+- Estúdio: /estudio
+- Blog: /blog
+- Visite: /visite
