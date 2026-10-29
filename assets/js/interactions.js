@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initWeekStrip();
+  initWeekStripMobile();
   initFAQAccordions();
   initMobileNav();
   initForms();
@@ -67,6 +68,59 @@ function initWeekStrip() {
   }
 }
 
+// 1b. Week Strip no celular: abas + cartões deslizantes (scroll-snap)
+function initWeekStripMobile() {
+  const tz = document.querySelector('.tzw');
+  if (!tz) return;
+  const row = tz.querySelector('.tzw-row');
+  const tabs = Array.from(tz.querySelectorAll('.tzw-tab'));
+  const slats = Array.from(tz.querySelectorAll('.tzw-slat'));
+  if (!row || !tabs.length || tabs.length !== slats.length) return;
+
+  const isMobile = () => tz.getBoundingClientRect().width <= 760;
+  let current = slats.findIndex((s) => s.getAttribute('data-open') === 'true');
+  if (current < 0) current = Math.min(2, slats.length - 1);
+
+  function offsetOf(i) {
+    return slats[i].getBoundingClientRect().left - row.getBoundingClientRect().left + row.scrollLeft;
+  }
+
+  function setActive(i, scroll, smooth) {
+    current = i;
+    slats.forEach((s, k) => {
+      s.setAttribute('data-open', k === i ? 'true' : 'false');
+      s.setAttribute('data-in', 'true');
+      s.style.opacity = '1';
+    });
+    tabs.forEach((t, k) => {
+      t.setAttribute('aria-selected', k === i ? 'true' : 'false');
+      t.setAttribute('tabindex', k === i ? '0' : '-1');
+    });
+    tz.style.setProperty('--tzw-sel', String(i));
+    if (scroll) row.scrollTo({ left: offsetOf(i), behavior: smooth ? 'smooth' : 'auto' });
+  }
+
+  tabs.forEach((t, i) => t.addEventListener('click', () => { if (isMobile()) setActive(i, true, true); }));
+
+  let ticking = false;
+  row.addEventListener('scroll', () => {
+    if (!isMobile() || ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      let best = 0, bestDist = Infinity;
+      slats.forEach((s, k) => {
+        const d = Math.abs(offsetOf(k) - row.scrollLeft);
+        if (d < bestDist) { bestDist = d; best = k; }
+      });
+      if (best !== current) setActive(best, false);
+    });
+  }, { passive: true });
+
+  if (isMobile()) setActive(current, true, false);
+  window.addEventListener('resize', () => { if (isMobile()) setActive(current, true, false); });
+}
+
 // 2. FAQ Accordions
 function initFAQAccordions() {
   const qSection = document.querySelector('[data-framer-name="Questions"]');
@@ -98,17 +152,50 @@ function initFAQAccordions() {
   });
 }
 
-// 3. Mobile Navigation Menu
+// 3. Mobile Navigation Menu (hambúrguer + painel com os links e o botão de aula grátis)
 function initMobileNav() {
-  const menuBtn = document.querySelector('[data-framer-name="Menu button"]');
-  const navLayer = document.querySelector('[data-framer-name="Navigation layer"]');
-  if (menuBtn && navLayer) {
-    menuBtn.style.cursor = 'pointer';
-    menuBtn.addEventListener('click', () => {
-      const isVisible = navLayer.style.display === 'flex' || navLayer.style.display === 'block';
-      navLayer.style.display = isVisible ? 'none' : 'flex';
-    });
+  const bar = document.querySelector('[data-framer-name="Bar"].framer-1xvbqlq') || document.querySelector('.framer-1xvbqlq');
+  if (!bar || bar.querySelector('.ff-menu-btn')) return;
+  const links = bar.querySelectorAll('[data-framer-name="Links"] a');
+  const cta = bar.querySelector('[data-framer-name="Actions"] a');
+  if (!links.length) return;
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'ff-menu-btn';
+  btn.setAttribute('aria-label', 'Abrir menu');
+  btn.setAttribute('aria-expanded', 'false');
+
+  const panel = document.createElement('nav');
+  panel.className = 'ff-menu-panel';
+  panel.setAttribute('aria-label', 'Menu principal');
+  links.forEach((a) => {
+    const item = document.createElement('a');
+    item.href = a.getAttribute('href');
+    item.textContent = a.textContent.trim();
+    panel.appendChild(item);
+  });
+  if (cta) {
+    const item = document.createElement('a');
+    item.className = 'ff-menu-cta';
+    item.href = cta.getAttribute('href');
+    item.textContent = cta.textContent.trim();
+    panel.appendChild(item);
   }
+
+  function setOpen(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  }
+  btn.addEventListener('click', (e) => { e.stopPropagation(); setOpen(!panel.classList.contains('open')); });
+  panel.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', (e) => { if (!bar.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  window.addEventListener('scroll', () => setOpen(false), { passive: true });
+
+  bar.appendChild(btn);
+  bar.appendChild(panel);
 }
 
 // 4. Booking and Contact Forms
