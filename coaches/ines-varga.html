@@ -175,23 +175,20 @@
       [data-framer-component-type="RichTextContainer"] {
         overflow: visible !important;
       }
-      .zp[data-js] .zp-img:not([data-in]) {
+      
+      /* Global unlock for all scroll-reveal animated elements */
+      [style*="opacity: 0"], [style*="opacity:0"], [style*="opacity: 0.001"] {
         opacity: 1 !important;
       }
+      [style*="translateY"] {
+        transform: none !important;
+      }
+      .zp[data-js] .zp-img:not([data-in]),
       .zp-img {
         opacity: 1 !important;
       }
-      /* General reveal for sections that had scroll animations */
-      section[style*="opacity: 0"], section[style*="opacity:0"],
-      header[style*="opacity: 0"], header[style*="opacity:0"],
-      [data-framer-name="Questions"][style*="opacity: 0"],
-      [data-framer-name="Stories"][style*="opacity: 0"],
-      [data-framer-name="Membership"][style*="opacity: 0"],
-      [data-framer-name="Classes"][style*="opacity: 0"],
-      [data-framer-name="Coaches"][style*="opacity: 0"] {
-        opacity: 1 !important;
-      }
-      /* Week strip slat collapsed/expanded calibration */
+
+      /* Preserved week strip collapsed/expanded slat styles */
       .tzw-slat[data-open="false"] .tzw-top,
       .tzw-slat[data-open="false"] .tzw-text,
       .tzw-slat[data-open="false"] .tzw-side,
@@ -223,6 +220,7 @@
         opacity: 0 !important;
         visibility: hidden !important;
       }
+
       /* FAQ accordions */
       .faq-answer-collapsed {
         display: none !important;
@@ -386,7 +384,7 @@ a:active .zp[data-show="hover"] .zp-tint{opacity:var(--zp-to)}
 @media (prefers-reduced-motion:reduce){
   .zp-img,.zp-tint{transition:opacity .2s linear}
 }
-</style><img class="zp-img" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 24vw, (max-width: 809.98px) 40vw, (min-width: 810px) and (max-width: 1199.98px) 48vw" src="../assets/images/T0hVti6eq73R7UyoldbVuWHQaUM.jpg" alt="Portrait of Mara Oyelaran" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-rg892g" data-framer-name="Shade"></div><div class="framer-1vr0w6p" data-framer-name="Home zone"><div class="framer-1ojr62t-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Home zone 4</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
+</style><img class="zp-img" loading="eager" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 24vw, (max-width: 809.98px) 40vw, (min-width: 810px) and (max-width: 1199.98px) 48vw" src="../assets/images/T0hVti6eq73R7UyoldbVuWHQaUM.jpg" alt="Portrait of Mara Oyelaran" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-rg892g" data-framer-name="Shade"></div><div class="framer-1vr0w6p" data-framer-name="Home zone"><div class="framer-1ojr62t-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Home zone 4</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
 .tzm-b::before,.tzm-b::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:inherit}
 .tzm-b::before{background-color:var(--off);opacity:var(--rest)}
 .tzm-b::after{background-color:transparent;transition:background-color .3s ease;transition-delay:var(--d)}
@@ -431,7 +429,7 @@ a:active .zp[data-show="hover"] .zp-tint{opacity:var(--zp-to)}
 @media (prefers-reduced-motion:reduce){
   .zp-img,.zp-tint{transition:opacity .2s linear}
 }
-</style><img class="zp-img" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 24vw, (max-width: 809.98px) 40vw, (min-width: 810px) and (max-width: 1199.98px) 48vw" src="../assets/images/ZGTvjpRm6y7r5UaPqVcqwk9SGZo.jpg" alt="Tomas Brandt in profile, in a plain T-shirt" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-rg892g" data-framer-name="Shade"></div><div class="framer-1vr0w6p" data-framer-name="Home zone"><div class="framer-1ojr62t-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Home zone 5</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
+</style><img class="zp-img" loading="eager" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 24vw, (max-width: 809.98px) 40vw, (min-width: 810px) and (max-width: 1199.98px) 48vw" src="../assets/images/ZGTvjpRm6y7r5UaPqVcqwk9SGZo.jpg" alt="Tomas Brandt in profile, in a plain T-shirt" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-rg892g" data-framer-name="Shade"></div><div class="framer-1vr0w6p" data-framer-name="Home zone"><div class="framer-1ojr62t-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Home zone 5</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
 .tzm-b::before,.tzm-b::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:inherit}
 .tzm-b::before{background-color:var(--off);opacity:var(--rest)}
 .tzm-b::after{background-color:transparent;transition:background-color .3s ease;transition-delay:var(--d)}
@@ -476,7 +474,7 @@ a:active .zp[data-show="hover"] .zp-tint{opacity:var(--zp-to)}
 @media (prefers-reduced-motion:reduce){
   .zp-img,.zp-tint{transition:opacity .2s linear}
 }
-</style><img class="zp-img" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 24vw, (max-width: 809.98px) 40vw, (min-width: 810px) and (max-width: 1199.98px) 48vw" src="../assets/images/0vjBUH7Yq2C8iOIL5eWBcDELQtg.jpg" alt="Portrait of Jonah Achebe" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-rg892g" data-framer-name="Shade"></div><div class="framer-1vr0w6p" data-framer-name="Home zone"><div class="framer-1ojr62t-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Home zone 2</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
+</style><img class="zp-img" loading="eager" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 24vw, (max-width: 809.98px) 40vw, (min-width: 810px) and (max-width: 1199.98px) 48vw" src="../assets/images/0vjBUH7Yq2C8iOIL5eWBcDELQtg.jpg" alt="Portrait of Jonah Achebe" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-rg892g" data-framer-name="Shade"></div><div class="framer-1vr0w6p" data-framer-name="Home zone"><div class="framer-1ojr62t-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Home zone 2</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
 .tzm-b::before,.tzm-b::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:inherit}
 .tzm-b::before{background-color:var(--off);opacity:var(--rest)}
 .tzm-b::after{background-color:transparent;transition:background-color .3s ease;transition-delay:var(--d)}

@@ -175,23 +175,20 @@
       [data-framer-component-type="RichTextContainer"] {
         overflow: visible !important;
       }
-      .zp[data-js] .zp-img:not([data-in]) {
+      
+      /* Global unlock for all scroll-reveal animated elements */
+      [style*="opacity: 0"], [style*="opacity:0"], [style*="opacity: 0.001"] {
         opacity: 1 !important;
       }
+      [style*="translateY"] {
+        transform: none !important;
+      }
+      .zp[data-js] .zp-img:not([data-in]),
       .zp-img {
         opacity: 1 !important;
       }
-      /* General reveal for sections that had scroll animations */
-      section[style*="opacity: 0"], section[style*="opacity:0"],
-      header[style*="opacity: 0"], header[style*="opacity:0"],
-      [data-framer-name="Questions"][style*="opacity: 0"],
-      [data-framer-name="Stories"][style*="opacity: 0"],
-      [data-framer-name="Membership"][style*="opacity: 0"],
-      [data-framer-name="Classes"][style*="opacity: 0"],
-      [data-framer-name="Coaches"][style*="opacity: 0"] {
-        opacity: 1 !important;
-      }
-      /* Week strip slat collapsed/expanded calibration */
+
+      /* Preserved week strip collapsed/expanded slat styles */
       .tzw-slat[data-open="false"] .tzw-top,
       .tzw-slat[data-open="false"] .tzw-text,
       .tzw-slat[data-open="false"] .tzw-side,
@@ -223,6 +220,7 @@
         opacity: 0 !important;
         visibility: hidden !important;
       }
+
       /* FAQ accordions */
       .faq-answer-collapsed {
         display: none !important;

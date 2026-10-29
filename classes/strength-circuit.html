@@ -175,23 +175,20 @@
       [data-framer-component-type="RichTextContainer"] {
         overflow: visible !important;
       }
-      .zp[data-js] .zp-img:not([data-in]) {
+      
+      /* Global unlock for all scroll-reveal animated elements */
+      [style*="opacity: 0"], [style*="opacity:0"], [style*="opacity: 0.001"] {
         opacity: 1 !important;
       }
+      [style*="translateY"] {
+        transform: none !important;
+      }
+      .zp[data-js] .zp-img:not([data-in]),
       .zp-img {
         opacity: 1 !important;
       }
-      /* General reveal for sections that had scroll animations */
-      section[style*="opacity: 0"], section[style*="opacity:0"],
-      header[style*="opacity: 0"], header[style*="opacity:0"],
-      [data-framer-name="Questions"][style*="opacity: 0"],
-      [data-framer-name="Stories"][style*="opacity: 0"],
-      [data-framer-name="Membership"][style*="opacity: 0"],
-      [data-framer-name="Classes"][style*="opacity: 0"],
-      [data-framer-name="Coaches"][style*="opacity: 0"] {
-        opacity: 1 !important;
-      }
-      /* Week strip slat collapsed/expanded calibration */
+
+      /* Preserved week strip collapsed/expanded slat styles */
       .tzw-slat[data-open="false"] .tzw-top,
       .tzw-slat[data-open="false"] .tzw-text,
       .tzw-slat[data-open="false"] .tzw-side,
@@ -223,6 +220,7 @@
         opacity: 0 !important;
         visibility: hidden !important;
       }
+
       /* FAQ accordions */
       .faq-answer-collapsed {
         display: none !important;
@@ -344,7 +342,7 @@ a:active .zp[data-show="hover"] .zp-tint{opacity:var(--zp-to)}
 @media (prefers-reduced-motion:reduce){
   .zp-img,.zp-tint{transition:opacity .2s linear}
 }
-</style><img class="zp-img" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 31vw, (max-width: 809.98px) 72vw, (min-width: 810px) and (max-width: 1199.98px) 46vw" src="../assets/images/QVqVKIU5J7MRor47ePrYsQ18XU.jpg" alt="A man riding an air bike" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-z9eg3w" data-framer-name="Body"><div class="framer-qzwix6" data-framer-name="Zone row"><div class="framer-x4khv5" data-framer-name="Zone"><div class="framer-y5su1o-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Zone 2</span><span class="tzm-dot" aria-hidden="true">·</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
+</style><img class="zp-img" loading="eager" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 31vw, (max-width: 809.98px) 72vw, (min-width: 810px) and (max-width: 1199.98px) 46vw" src="../assets/images/QVqVKIU5J7MRor47ePrYsQ18XU.jpg" alt="A man riding an air bike" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-z9eg3w" data-framer-name="Body"><div class="framer-qzwix6" data-framer-name="Zone row"><div class="framer-x4khv5" data-framer-name="Zone"><div class="framer-y5su1o-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Zone 2</span><span class="tzm-dot" aria-hidden="true">·</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
 .tzm-b::before,.tzm-b::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:inherit}
 .tzm-b::before{background-color:var(--off);opacity:var(--rest)}
 .tzm-b::after{background-color:transparent;transition:background-color .3s ease;transition-delay:var(--d)}
@@ -389,7 +387,7 @@ a:active .zp[data-show="hover"] .zp-tint{opacity:var(--zp-to)}
 @media (prefers-reduced-motion:reduce){
   .zp-img,.zp-tint{transition:opacity .2s linear}
 }
-</style><img class="zp-img" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 31vw, (max-width: 809.98px) 72vw, (min-width: 810px) and (max-width: 1199.98px) 46vw" src="../assets/images/E07hofX5Zxn3LNtKaKrHcWyVw.jpg" alt="Member driving a sled forward" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-z9eg3w" data-framer-name="Body"><div class="framer-qzwix6" data-framer-name="Zone row"><div class="framer-x4khv5" data-framer-name="Zone"><div class="framer-y5su1o-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Zone 4</span><span class="tzm-dot" aria-hidden="true">·</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
+</style><img class="zp-img" loading="eager" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 31vw, (max-width: 809.98px) 72vw, (min-width: 810px) and (max-width: 1199.98px) 46vw" src="../assets/images/E07hofX5Zxn3LNtKaKrHcWyVw.jpg" alt="Member driving a sled forward" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-z9eg3w" data-framer-name="Body"><div class="framer-qzwix6" data-framer-name="Zone row"><div class="framer-x4khv5" data-framer-name="Zone"><div class="framer-y5su1o-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Zone 4</span><span class="tzm-dot" aria-hidden="true">·</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
 .tzm-b::before,.tzm-b::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:inherit}
 .tzm-b::before{background-color:var(--off);opacity:var(--rest)}
 .tzm-b::after{background-color:transparent;transition:background-color .3s ease;transition-delay:var(--d)}
@@ -434,7 +432,7 @@ a:active .zp[data-show="hover"] .zp-tint{opacity:var(--zp-to)}
 @media (prefers-reduced-motion:reduce){
   .zp-img,.zp-tint{transition:opacity .2s linear}
 }
-</style><img class="zp-img" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 31vw, (max-width: 809.98px) 72vw, (min-width: 810px) and (max-width: 1199.98px) 46vw" src="../assets/images/Qn4kE4e5Kh7VNyyDzYfrUH4yZY.jpg" alt="Member in a seated stretch" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-z9eg3w" data-framer-name="Body"><div class="framer-qzwix6" data-framer-name="Zone row"><div class="framer-x4khv5" data-framer-name="Zone"><div class="framer-y5su1o-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Zone 1</span><span class="tzm-dot" aria-hidden="true">·</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
+</style><img class="zp-img" loading="eager" decoding="async" fetchpriority="auto" sizes="(min-width: 1200px) 31vw, (max-width: 809.98px) 72vw, (min-width: 810px) and (max-width: 1199.98px) 46vw" src="../assets/images/Qn4kE4e5Kh7VNyyDzYfrUH4yZY.jpg" alt="Member in a seated stretch" draggable="false" data-seen="1" data-in="true"><span class="zp-tint" aria-hidden="true"></span></div></div><!--/$--></div></div><div class="framer-z9eg3w" data-framer-name="Body"><div class="framer-qzwix6" data-framer-name="Zone row"><div class="framer-x4khv5" data-framer-name="Zone"><div class="framer-y5su1o-container" data-code-component-plugin-id="api" data-framer-name="Meter" name="Meter"><!--$--><span class="tzm" style="display:inline-flex;align-items:baseline;white-space:nowrap;font-family:&quot;Switzer&quot;, &quot;Switzer&quot;, system-ui, sans-serif;font-size:14.5px;font-weight:500;line-height:1.2;letter-spacing:-0.012em;color:rgb(13, 13, 14)"><span>Zone 1</span><span class="tzm-dot" aria-hidden="true">·</span><style>.tzm-b{--d:0s;position:relative;display:block;width:var(--w);height:var(--h);border-radius:var(--h)}
 .tzm-b::before,.tzm-b::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:inherit}
 .tzm-b::before{background-color:var(--off);opacity:var(--rest)}
 .tzm-b::after{background-color:transparent;transition:background-color .3s ease;transition-delay:var(--d)}
